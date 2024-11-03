@@ -2,6 +2,7 @@
 
 #include <iostream>
 namespace dzomaTools {//v0.01
+	//static arrays
 	void inputNumbers(int arr[], unsigned short numbers, const char* text, short changeCounter);
 	void inputNumbers(double arr[], unsigned short numbers, const char* text, short changeCounter);
 
