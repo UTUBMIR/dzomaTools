@@ -77,38 +77,42 @@ void dzomaTools::inputNumbers(double arr[], unsigned short numbers, const char* 
 
 
 void dzomaTools::minInDiapason(int arr[], size_t start, size_t end) {
-	int min = arr[start];
+	int min = start;
 	for (++start; start < end; ++start) {
-		if (arr[start] < min) {
-			min = arr[start];
+		if (arr[start] < arr[min]) {
+			min = start;
 		}
 	}
+	return min;
 }
 
 void dzomaTools::maxInDiapason(int arr[], size_t start, size_t end) {
-	int max = arr[start];
+	int max = start;
 	for (++start; start < end; ++start) {
-		if (arr[start] > max) {
-			max = arr[start];
+		if (arr[start] > arr[max]) {
+			max = start;
 		}
 	}
+	return max;
 }
 
 void dzomaTools::minInDiapason(double arr[], size_t start, size_t end) {
-	int min = arr[start];
+	int min = start;
 	for (++start; start < end; ++start) {
-		if (arr[start] < min) {
-			min = arr[start];
+		if (arr[start] < arr[min]) {
+			min = start;
 		}
 	}
+	return min;
 }
 
 void dzomaTools::maxInDiapason(double arr[], size_t start, size_t end) {
-	int max = arr[start];
+	int max = start;
 	for (++start; start < end; ++start) {
-		if (arr[start] > max) {
-			max = arr[start];
+		if (arr[start] > arr[max]) {
+			max = start;
 		}
 	}
+	return max;
 }
 //static arrays//
