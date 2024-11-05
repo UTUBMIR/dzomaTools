@@ -1,6 +1,6 @@
 #include "dzomaTools.h"//v0.01
 
-//static destinationays
+//static arrays
 void dzomaTools::inputNumbers(int destination[], unsigned short numbers, const char* text, short changeCounter) {
 	for (char i = 0; i < numbers; ++i) {
 		while (true) {
@@ -190,4 +190,4 @@ size_t dzomaTools::maxInDiapason(double destination[], size_t start, size_t end)
 	}
 	return max;
 }
-//static destinationays//
+//static arrays//
