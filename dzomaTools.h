@@ -3,14 +3,14 @@
 #include <iostream>
 namespace dzomaTools {//v0.01
 	//static arrays
-	void inputNumbers(int arr[], unsigned short numbers, const char* text, short changeCounter);
-	void inputNumbers(double arr[], unsigned short numbers, const char* text, short changeCounter);
+	void inputNumbers(int array[], unsigned short numbers, const char* text, short changeCounter);
+	void inputNumbers(double array[], unsigned short numbers, const char* text, short changeCounter);
 
-	void inputNumbers(int arr[], unsigned short numbers, const char* text, short changeCounter, const char* addition[]);
-	void inputNumbers(double arr[], unsigned short numbers, const char* text, short changeCounter, const char* addition[]);
+	void inputNumbers(int array[], unsigned short numbers, const char* text, short changeCounter, const char* addition[]);
+	void inputNumbers(double array[], unsigned short numbers, const char* text, short changeCounter, const char* addition[]);
 
 	//with min and max
-	void inputNumbers(int arr[], unsigned short numbers, const char* text, short changeCounter, int min, int max);
+	void inputNumbers(int array[], unsigned short numbers, const char* text, short changeCounter, int min, int max);
 	void inputNumbers(double arr[], unsigned short numbers, const char* text, short changeCounter, int min, int max);
 
 	void inputNumbers(int arr[], unsigned short numbers, const char* text, short changeCounter, const char* addition[], int min, int max);
