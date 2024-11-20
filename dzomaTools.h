@@ -10,7 +10,7 @@ namespace dzomaTools {//v0.01
 	void inputNumbers(double destination[], unsigned short numbers, const char* text, short changeCounter);
 
 	//getting numbers from user. 
-	//prints unique text for all items.
+	//prints text with additions for all items.
 	void inputNumbers(int destination[], unsigned short numbers, const char* text, short changeCounter, const char* addition[]);
 	void inputNumbers(double destination[], unsigned short numbers, const char* text, short changeCounter, const char* addition[]);
 
@@ -20,7 +20,7 @@ namespace dzomaTools {//v0.01
 	void inputNumbers(double destination[], unsigned short numbers, const char* text, short changeCounter, double min, double max);
 
 	//getting numbers from user. 
-	//prints unique text for all items with min and max.
+	//prints text with additions for all items with min and max.
 	void inputNumbers(int destination[], unsigned short numbers, const char* text, short changeCounter, const char* addition[], int min, int max);
 	void inputNumbers(double destination[], unsigned short numbers, const char* text, short changeCounter, const char* addition[], double min, double max);
 
