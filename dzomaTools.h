@@ -18,12 +18,11 @@ namespace dzomaTools {//v0.01
 	void inputNumbers(int destination[], unsigned short numbers, const char* text, short changeCounter, const char* addition[], int min, int max);
 	void inputNumbers(double destination[], unsigned short numbers, const char* text, short changeCounter, const char* addition[], double min, double max);
 
+	template <typename T>
+	size_t minInDiapason(T destination[], size_t start, size_t end);
 
-	size_t minInDiapason(int destination[], size_t start, size_t end);
-	size_t maxInDiapason(int destination[], size_t start, size_t end);
-
-	size_t minInDiapason(double destination[], size_t start, size_t end);
-	size_t maxInDiapason(double destination[], size_t start, size_t end);
+	template <typename T>
+	size_t maxInDiapason(T destination[], size_t start, size_t end);
 	//static arrays//
 };
 

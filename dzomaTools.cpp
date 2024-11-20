@@ -181,8 +181,8 @@ void dzomaTools::inputNumbers(double destination[], unsigned short numbers, cons
 
 
 
-
-size_t dzomaTools::minInDiapason(int destination[], size_t start, size_t end) {
+template <typename T>
+size_t dzomaTools::minInDiapason(T destination[], size_t start, size_t end) {
 	size_t min = start;
 	for (++start; start <= end; ++start) {
 		if (destination[start] < destination[min]) {
@@ -192,7 +192,8 @@ size_t dzomaTools::minInDiapason(int destination[], size_t start, size_t end) {
 	return min;
 }
 
-size_t dzomaTools::maxInDiapason(int destination[], size_t start, size_t end) {
+template <typename T>
+size_t dzomaTools::maxInDiapason(T destination[], size_t start, size_t end) {
 	size_t max = start;
 	for (++start; start <= end; ++start) {
 		if (destination[start] > destination[max]) {
@@ -202,23 +203,4 @@ size_t dzomaTools::maxInDiapason(int destination[], size_t start, size_t end) {
 	return max;
 }
 
-size_t dzomaTools::minInDiapason(double destination[], size_t start, size_t end) {
-	size_t min = start;
-	for (++start; start <= end; ++start) {
-		if (destination[start] < destination[min]) {
-			min = start;
-		}
-	}
-	return min;
-}
-
-size_t dzomaTools::maxInDiapason(double destination[], size_t start, size_t end) {
-	size_t max = start;
-	for (++start; start <= end; ++start) {
-		if (destination[start] > destination[max]) {
-			max = start;
-		}
-	}
-	return max;
-}
 //static arrays//
