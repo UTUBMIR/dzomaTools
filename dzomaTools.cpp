@@ -4,7 +4,6 @@ int dzomaTools::random(int min, int max) {
 	return min + rand() % (max - min + 1);
 }
 
-//static arrays
 void dzomaTools::inputNumbers(int destination[], unsigned short numbers, const char* text, short changeCounter) {
 	system("cls");
 	for (char i = 0; i < numbers; ++i) {
@@ -202,5 +201,3 @@ size_t dzomaTools::maxInDiapason(T destination[], size_t start, size_t end) {
 	}
 	return max;
 }
-
-//static arrays//
