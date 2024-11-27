@@ -2,6 +2,9 @@
 
 #include <iostream>
 using namespace std;
+
+
+
 namespace dzomaTools {//v0.01
 	
 	//generating random number, between min and max.
@@ -42,40 +45,37 @@ namespace dzomaTools {//v0.01
 	//asks question of user('y' or 'n')
 	//and returns true if 'y'
 	bool ask(const char* text);
-
-
-
-	//like exception from "std" but also prints: line, time, date;
-	class BException: public exception {
-	private:
-		char* message = nullptr;
-
-	public:
-		BException(const char* msg): message(nullptr) {
-			time_t now = time(nullptr);
-			tm time;
-			localtime_s(&time, &now);
-
-			char buffer[50];
-			std::strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", &time);
-
-			size_t totalLength = strlen(buffer) + strlen(msg) + 24;
-			if (message == nullptr) {
-				delete[] message;
-			}
-			message = new char[totalLength];
-
-			snprintf(message, totalLength, "Error on line %d at[%s]: %s", __LINE__, buffer, msg);
-		}
-
-		const char* what() const noexcept override {
-			return message;
-		}
-
-		~BException();
-	};
-	BException::~BException() {
-		delete[] message;
-	}
 };
 
+
+//class BException: public exception {
+//private:
+//	char* message = nullptr;
+//
+//public:
+//	BException(const char* msg): message(nullptr) {
+//		time_t now = time(nullptr);
+//		tm time;
+//		localtime_s(&time, &now);
+//
+//		char buffer[50];
+//		std::strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", &time);
+//
+//		size_t totalLength = strlen(buffer) + strlen(msg) + 24;
+//		if (message == nullptr) {
+//			delete[] message;
+//		}
+//		message = new char[totalLength];
+//
+//		snprintf(message, totalLength, "Error on line %d at[%s]: %s", __LINE__, buffer, msg);
+//	}
+//
+//	const char* what() const noexcept override {
+//		return message;
+//	}
+//
+//	~BException();
+//};
+//BException::~BException() {
+//	delete[] message;
+//}
