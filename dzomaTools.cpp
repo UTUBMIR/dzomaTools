@@ -1,8 +1,7 @@
 #include "dzomaTools.h"//v0.01
 
-int dzomaTools::random(int min, int max) {
-	return min + rand() % (max - min + 1);
-}
+
+
 
 void dzomaTools::inputNumbers(int destination[], unsigned short numbers, const char* text, short changeCounter) {
 	system("cls");
@@ -178,8 +177,6 @@ void dzomaTools::inputNumbers(double destination[], unsigned short numbers, cons
 }
 
 
-
-
 template <typename T>
 size_t dzomaTools::minInDiapason(T destination[], size_t start, size_t end) {
 	size_t min = start;
@@ -200,4 +197,25 @@ size_t dzomaTools::maxInDiapason(T destination[], size_t start, size_t end) {
 		}
 	}
 	return max;
+}
+
+
+bool dzomaTools::ask(const char* text) {
+	char answer;
+	while (true) {
+		system("cls");
+		printf(text);
+		printf("(y/n): ");
+		scanf_s("%c", &answer, 1);
+		if (answer != 'y' && answer != 'n') {
+			while (getchar() != '\n');
+			continue;
+		}
+		return answer == 'y';
+	}
+}
+
+
+double dzomaTools::random(double min, double max) {
+	return fmod(min + rand(), (max - min + 1));
 }
