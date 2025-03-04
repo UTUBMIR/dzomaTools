@@ -11,7 +11,7 @@ void dzomaTools::inputNumbers(int destination[], unsigned short numbers, const c
 			if (scanf_s("%d", &destination[i]) != 1) {
 				while (getchar() != '\n');
 				system("cls");
-				printf("Enter number!\n");
+				printf("\aError: Enter number!\n");
 			}
 			else {
 				system("cls");
@@ -30,7 +30,7 @@ void dzomaTools::inputNumbers(double destination[], unsigned short numbers, cons
 			if (scanf_s("%lf", &destination[i]) != 1) {
 				while (getchar() != '\n');
 				system("cls");
-				printf("Enter number!\n");
+				printf("\aError: Enter number!\n");
 			}
 			else {
 				system("cls");
@@ -54,7 +54,7 @@ void dzomaTools::inputNumbers(int destination[], unsigned short numbers, const c
 			if (scanf_s("%d", &destination[i]) != 1) {
 				while (getchar() != '\n');
 				system("cls");
-				printf("Enter number!\n");
+				printf("\aError: Enter number!\n");
 			}
 			else {
 				system("cls");
@@ -77,7 +77,7 @@ void dzomaTools::inputNumbers(double destination[], unsigned short numbers, cons
 			if (scanf_s("%lf", &destination[i]) != 1) {
 				while (getchar() != '\n');
 				system("cls");
-				printf("Enter number!\n");
+				printf("\aError: Enter number!\n");
 			}
 			else {
 				system("cls");
@@ -99,7 +99,7 @@ void dzomaTools::inputNumbers(int destination[], unsigned short numbers, const c
 			if (scanf_s("%d", &destination[i]) != 1 || destination[i] < min || destination[i] > max) {
 				while (getchar() != '\n');
 				system("cls");
-				printf("Enter number from %d to %d!\n", min, max);
+				printf("\aError: Enter number from %d to %d!\n", min, max);
 			}
 			else {
 				system("cls");
@@ -118,7 +118,7 @@ void dzomaTools::inputNumbers(double destination[], unsigned short numbers, cons
 			if (scanf_s("%lf", &destination[i]) != 1 || destination[i] < min || destination[i] > max) {
 				while (getchar() != '\n');
 				system("cls");
-				printf("Enter number from %lf to %lf!\n", min, max);
+				printf("\aError: Enter number from %lf to %lf!\n", min, max);
 			}
 			else {
 				system("cls");
@@ -142,7 +142,7 @@ void dzomaTools::inputNumbers(int destination[], unsigned short numbers, const c
 			if (scanf_s("%d", &destination[i]) != 1 || destination[i] < min || destination[i] > max) {
 				while (getchar() != '\n');
 				system("cls");
-				printf("Enter number from %d to %d!\n", min, max);
+				printf("\aError: Enter number from %d to %d!\n", min, max);
 			}
 			else {
 				system("cls");
@@ -165,7 +165,7 @@ void dzomaTools::inputNumbers(double destination[], unsigned short numbers, cons
 			if (scanf_s("%lf", &destination[i]) != 1 || destination[i] < min || destination[i] > max) {
 				while (getchar() != '\n');
 				system("cls");
-				printf("Enter number from %lf to %lf!\n", min, max);
+				printf("\aError: Enter number from %lf to %lf!\n", min, max);
 			}
 			else {
 				system("cls");
