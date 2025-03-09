@@ -1,50 +1,86 @@
 #include "dzomaTools.h"//v0.01
 
 
+void dt::inputChars(char destination[], unsigned short count, const char* text, short changeCounter) {
+	clearConsole();
+	for (char i = 0; i < count; ++i) {
+		while (true) {
+			printf(text, i + changeCounter);
+			if (scanf_s(" %c", &destination[i], 1) != 1) {
+				while (getchar() != '\n');
+				clearConsole();
+				printf("\aError: Enter number!\n");
+			}
+			else {
+				clearConsole();
+				break;
+			}
+		}
+	}
+	clearConsole();
+}
 
+void dt::inputChars(char destination[], unsigned short count, const char* text, short changeCounter, char min, char max, bool matchCase) {
+	clearConsole();
+	for (char i = 0; i < count; ++i) {
+		while (true) {
+			printf(text, i + changeCounter);
+			if (scanf_s(" %c", &destination[i], 1) != 1 || ((destination[i] < min || destination[i] > max) && ((destination[i] < (min + 32) || destination[i] > (max + 32)) || matchCase))) {
+				while (getchar() != '\n');
+				clearConsole();
+				printf("\aError: Enter char from %c to %c!\n", min, max);
+			}
+			else {
+				clearConsole();
+				break;
+			}
+		}
+	}
+	clearConsole();
+}
 
-void dzomaTools::inputNumbers(int destination[], unsigned short numbers, const char* text, short changeCounter) {
-	system("cls");
-	for (char i = 0; i < numbers; ++i) {
+void dt::inputNumbers(int destination[], unsigned short count, const char* text, short changeCounter) {
+	clearConsole();
+	for (char i = 0; i < count; ++i) {
 		while (true) {
 			printf(text, i + changeCounter);
 			if (scanf_s("%d", &destination[i]) != 1) {
 				while (getchar() != '\n');
-				system("cls");
+				clearConsole();
 				printf("\aError: Enter number!\n");
 			}
 			else {
-				system("cls");
+				clearConsole();
 				break;
 			}
 		}
 	}
-	system("cls");
+	clearConsole();
 }
 
-void dzomaTools::inputNumbers(double destination[], unsigned short numbers, const char* text, short changeCounter) {
-	system("cls");
-	for (char i = 0; i < numbers; ++i) {
+void dt::inputNumbers(double destination[], unsigned short count, const char* text, short changeCounter) {
+	clearConsole();
+	for (char i = 0; i < count; ++i) {
 		while (true) {
 			printf(text, i + changeCounter);
 			if (scanf_s("%lf", &destination[i]) != 1) {
 				while (getchar() != '\n');
-				system("cls");
+				clearConsole();
 				printf("\aError: Enter number!\n");
 			}
 			else {
-				system("cls");
+				clearConsole();
 				break;
 			}
 		}
 	}
-	system("cls");
+	clearConsole();
 }
 
 
-void dzomaTools::inputNumbers(int destination[], unsigned short numbers, const char* text, short changeCounter, const char* addition[]) {
-	system("cls");
-	for (char i = 0; i < numbers; ++i) {
+void dt::inputNumbers(int destination[], unsigned short count, const char* text, short changeCounter, const char* addition[]) {
+	clearConsole();
+	for (char i = 0; i < count; ++i) {
 		while (true) {
 			char* buffer = new char[strlen(text) + strlen(addition[i]) + 3];
 			sprintf_s(buffer, strlen(text) + strlen(addition[i]) + 3, "%s%s", text, addition[i]);
@@ -53,21 +89,21 @@ void dzomaTools::inputNumbers(int destination[], unsigned short numbers, const c
 			delete[] buffer;
 			if (scanf_s("%d", &destination[i]) != 1) {
 				while (getchar() != '\n');
-				system("cls");
+				clearConsole();
 				printf("\aError: Enter number!\n");
 			}
 			else {
-				system("cls");
+				clearConsole();
 				break;
 			}
 		}
 	}
-	system("cls");
+	clearConsole();
 }
 
-void dzomaTools::inputNumbers(double destination[], unsigned short numbers, const char* text, short changeCounter, const char* addition[]) {
-	system("cls");
-	for (char i = 0; i < numbers; ++i) {
+void dt::inputNumbers(double destination[], unsigned short count, const char* text, short changeCounter, const char* addition[]) {
+	clearConsole();
+	for (char i = 0; i < count; ++i) {
 		while (true) {
 			char* buffer = new char[strlen(text) + strlen(addition[i]) + 3];
 			sprintf_s(buffer, strlen(text) + strlen(addition[i]) + 3, "%s%s", text, addition[i]);
@@ -76,63 +112,63 @@ void dzomaTools::inputNumbers(double destination[], unsigned short numbers, cons
 			delete[] buffer;
 			if (scanf_s("%lf", &destination[i]) != 1) {
 				while (getchar() != '\n');
-				system("cls");
+				clearConsole();
 				printf("\aError: Enter number!\n");
 			}
 			else {
-				system("cls");
+				clearConsole();
 				break;
 			}
 		}
 	}
-	system("cls");
+	clearConsole();
 }
 
 
 
 
-void dzomaTools::inputNumbers(int destination[], unsigned short numbers, const char* text, short changeCounter, int min, int max) {
-	system("cls");
-	for (char i = 0; i < numbers; ++i) {
+void dt::inputNumbers(int destination[], unsigned short count, const char* text, short changeCounter, int min, int max) {
+	clearConsole();
+	for (char i = 0; i < count; ++i) {
 		while (true) {
 			printf(text, i + changeCounter);
 			if (scanf_s("%d", &destination[i]) != 1 || destination[i] < min || destination[i] > max) {
 				while (getchar() != '\n');
-				system("cls");
+				clearConsole();
 				printf("\aError: Enter number from %d to %d!\n", min, max);
 			}
 			else {
-				system("cls");
+				clearConsole();
 				break;
 			}
 		}
 	}
-	system("cls");
+	clearConsole();
 }
 
-void dzomaTools::inputNumbers(double destination[], unsigned short numbers, const char* text, short changeCounter, double min, double max) {
-	system("cls");
-	for (char i = 0; i < numbers; ++i) {
+void dt::inputNumbers(double destination[], unsigned short count, const char* text, short changeCounter, double min, double max) {
+	clearConsole();
+	for (char i = 0; i < count; ++i) {
 		while (true) {
 			printf(text, i + changeCounter);
 			if (scanf_s("%lf", &destination[i]) != 1 || destination[i] < min || destination[i] > max) {
 				while (getchar() != '\n');
-				system("cls");
+				clearConsole();
 				printf("\aError: Enter number from %lf to %lf!\n", min, max);
 			}
 			else {
-				system("cls");
+				clearConsole();
 				break;
 			}
 		}
 	}
-	system("cls");
+	clearConsole();
 }
 
 
-void dzomaTools::inputNumbers(int destination[], unsigned short numbers, const char* text, short changeCounter, const char* addition[], int min, int max) {
-	system("cls");
-	for (char i = 0; i < numbers; ++i) {
+void dt::inputNumbers(int destination[], unsigned short count, const char* text, short changeCounter, const char* addition[], int min, int max) {
+	clearConsole();
+	for (char i = 0; i < count; ++i) {
 		while (true) {
 			char* buffer = new char[strlen(text) + strlen(addition[i]) + 3];
 			sprintf_s(buffer, strlen(text) + strlen(addition[i]) + 3, "%s%s", text, addition[i]);
@@ -141,21 +177,21 @@ void dzomaTools::inputNumbers(int destination[], unsigned short numbers, const c
 			delete[] buffer;
 			if (scanf_s("%d", &destination[i]) != 1 || destination[i] < min || destination[i] > max) {
 				while (getchar() != '\n');
-				system("cls");
+				clearConsole();
 				printf("\aError: Enter number from %d to %d!\n", min, max);
 			}
 			else {
-				system("cls");
+				clearConsole();
 				break;
 			}
 		}
 	}
-	system("cls");
+	clearConsole();
 }
 
-void dzomaTools::inputNumbers(double destination[], unsigned short numbers, const char* text, short changeCounter, const char* addition[], double min, double max) {
-	system("cls");
-	for (char i = 0; i < numbers; ++i) {
+void dt::inputNumbers(double destination[], unsigned short count, const char* text, short changeCounter, const char* addition[], double min, double max) {
+	clearConsole();
+	for (char i = 0; i < count; ++i) {
 		while (true) {
 			char* buffer = new char[strlen(text) + strlen(addition[i]) + 3];
 			sprintf_s(buffer, strlen(text) + strlen(addition[i]) + 3, "%s%s", text, addition[i]);
@@ -164,21 +200,21 @@ void dzomaTools::inputNumbers(double destination[], unsigned short numbers, cons
 			delete[] buffer;
 			if (scanf_s("%lf", &destination[i]) != 1 || destination[i] < min || destination[i] > max) {
 				while (getchar() != '\n');
-				system("cls");
+				clearConsole();
 				printf("\aError: Enter number from %lf to %lf!\n", min, max);
 			}
 			else {
-				system("cls");
+				clearConsole();
 				break;
 			}
 		}
 	}
-	system("cls");
+	clearConsole();
 }
 
 
 template <typename T>
-size_t dzomaTools::minInDiapason(T destination[], size_t start, size_t end) {
+size_t dt::minInDiapason(T destination[], size_t start, size_t end) {
 	size_t min = start;
 	for (++start; start <= end; ++start) {
 		if (destination[start] < destination[min]) {
@@ -189,7 +225,7 @@ size_t dzomaTools::minInDiapason(T destination[], size_t start, size_t end) {
 }
 
 template <typename T>
-size_t dzomaTools::maxInDiapason(T destination[], size_t start, size_t end) {
+size_t dt::maxInDiapason(T destination[], size_t start, size_t end) {
 	size_t max = start;
 	for (++start; start <= end; ++start) {
 		if (destination[start] > destination[max]) {
@@ -200,13 +236,13 @@ size_t dzomaTools::maxInDiapason(T destination[], size_t start, size_t end) {
 }
 
 
-bool dzomaTools::ask(const char* text) {
+bool dt::ask(const char* text) {
 	char answer;
 	while (true) {
-		system("cls");
+		clearConsole();
 		printf(text);
 		printf("(y/n): ");
-		scanf_s("%c", &answer, 1);
+		scanf_s(" %c", &answer, 1);
 		if (answer != 'y' && answer != 'n') {
 			while (getchar() != '\n');
 			continue;
@@ -216,6 +252,21 @@ bool dzomaTools::ask(const char* text) {
 }
 
 
-double dzomaTools::random(double min, double max) {
+void dt::clearConsole() {
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	COORD coordScreen = {0, 0};
+	DWORD cCharsWritten;
+	CONSOLE_SCREEN_BUFFER_INFO csbi;
+	DWORD dwConSize;
+
+	if (!GetConsoleScreenBufferInfo(hConsole, &csbi)) return;
+	dwConSize = csbi.dwSize.X * csbi.dwSize.Y;
+
+	FillConsoleOutputCharacter(hConsole, ' ', dwConSize, coordScreen, &cCharsWritten);
+	FillConsoleOutputAttribute(hConsole, csbi.wAttributes, dwConSize, coordScreen, &cCharsWritten);
+	SetConsoleCursorPosition(hConsole, coordScreen);
+}
+
+double dt::random(double min, double max) {
 	return fmod(min + rand(), (max - min + 1));
 }

@@ -1,14 +1,27 @@
 #pragma once
 
 #include <iostream>
+#include <Windows.h>
 using namespace std;
 
 
 
-namespace dzomaTools {//v0.01
-	
+namespace dt {//v0.01
+
+	//fast way to clear console
+	void clearConsole();
+
 	//generating random number, between min and max.
 	double random(double min, double max);
+
+	//getting chars from user. 
+	//use %d in text to replace it with (item + "changeCounter").
+	void inputChars(char destination[], unsigned short count, const char* text, short changeCounter);
+
+	//getting chars from user. 
+	//with min and max.
+	//use %d in text or addition to replace it with (item + "changeCounter").
+	void inputChars(char destination[], unsigned short count, const char* text, short changeCounter, char min, char max, bool matchCase = true);
 
 	//getting numbers from user. 
 	//use %d in text to replace it with (item + "changeCounter").
